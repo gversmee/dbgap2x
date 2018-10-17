@@ -1,4 +1,4 @@
-FROM gversmee/jupyter-full:latest
+FROM gversmee/jupyter-full:dbgap2x
 
 LABEL maintainer="Gregoire Versmee <gregoire.versmee@gmail.com>"
 
