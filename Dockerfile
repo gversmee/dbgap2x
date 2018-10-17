@@ -1,8 +1,6 @@
-# Copyright (c) Jupyter Development Team.
-# Distributed under the terms of the Modified BSD License.
-FROM gversmee/jupyter-full
+FROM gversmee/jupyter-full:latest
 
-LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
+LABEL maintainer="Gregoire Versmee <gregoire.versmee@gmail.com>"
 
 RUN git clone https://github.com/gversmee/dbGaP2x
 
