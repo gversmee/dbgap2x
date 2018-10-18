@@ -275,13 +275,53 @@ head(vardict)
 
 
 
-Now that we have explore our datasets, let's use sandboxR in order to clean our variables, and to gather them into a tree that will be easier to use for researchers. Note that for chapter 3, we will need to move and create a lot of files on your environment. It will be easier to use on your local computer than in the Jupyterhub environment.
-
 ## 3. Extract your study
-### 3.1. Export your data from dbGap
-In order to get your data from dbGap, you will need to request an access and to get a decryption key. This has to be done here: https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi?login=&page=login
-### 3.2. Decrypt your files
-We found that the decryption system from dbGap can be tricky. We created dbgap.decrypt() in order to easily decrypt the files that you have downloaded. Note that the "files" argument can be a file or a folder containing multiple encrypted files. Also, this function works only for Mac OS at this moment.
+### 3.1. Get your dbGaP repository key
+In order to download or decrypt your data from dbGap, you will need to request an access and to get a decryption key. Follow those steps to access your dbGaP repository key:
+#### a. Go to https://www.ncbi.nlm.nih.gov/gap and click on "controlled access data"
+![test](Screenshots/Screen1.png)
+#### b. Click on Log in to dbGaP
+![test](Screenshots/Screen2.png)
+#### c. Identify yourself with your era common ID and password
+![test](Screenshots/Screen3.png)
+#### d. Get a PI dbGaP repository key
+In order to download the files and to decrypt them, you will need a decryption key. This key can be found on a PI dbGaP account, under `Get no password dbGaP repository key`
+![test](Screenshots/Screen91.png)
+### 3.2. Decrypt the .ncbi_enc files
+On dbGaP, the phenotypic files are encrypted. We created a decryption function that uses a dockerized version on sratoolkit. To use that function, you need to have docker installed on your device (www.docker.com). If you are using the dockerized version of this software (available at hub.docker.com/r/gversmee/dbgap2x), docker is already pre-installed, but you'll need to upload your key on the jupyter working directory. To try the function, we put some pre-encrypted files on the repo
+
+
+```R
 key <- "path/to/your/key.ngc"
-files <- "path/to/the/files/you/want/to/decrypt.ncbi_enc"
-dbgap.decrypt(file, key)
+files <- "path/to/the/directory/of/your/encrypted/files"
+dbgap.decrypt(files, key)
+```
+
+You should see a "decrypted_files" directory in the directory where your encrypted files are located
+
+### 3.3. Download dbGaP files
+#### a. Click on "file selector"
+This gives you access to the dbGaP file selector where you can find all the files available for the selected project.
+![test](Screenshots/Screen41.png)
+#### b. Filter by study accession
+Here, we want to get the phenotypic data for the study "Early onset COPD", so after checking `Study accession`, we select "phs000946".
+![test](Screenshots/Screen51.png)
+#### c. Filter again
+Since we are only interested in getting the phenotypic data, let's filter by `Content type` and select `phenotype individual-auxiliary` and `phenotype individual-traits`
+![test](Screenshots/Screen61.png)
+#### d. Select the files
+Click on "+" to select all the files
+![test](Screenshots/Screen72.png)
+#### e. Click on "Cart file"
+This will downlaod a .krt file in your download folder
+![test](Screenshots/Screen81.png)
+### f. Download and decrypt the files with a simple command
+
+
+```R
+key <- "path/to/your/key.ngc"
+cart <- "path/to/your/cart/file.krt"
+dbgap.download(cart, key)
+```
+
+You should see in your working directory a new one name dbGaP-*** that contains your files
