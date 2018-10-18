@@ -12,6 +12,12 @@ fix-permissions /home/$NB_USER
 
 RUN Rscript -e "install('dbGaP2x')"
 
+RUN apt update -y
+RUN apt install docker.io -y
+RUN usermod -aG docker jovyan
+
+CMD chgrp docker /var/run/docker.sock && start-notebook.sh
+
 USER $NB_UID
 
 WORKDIR $HOME
