@@ -5,6 +5,21 @@
 
 # Using dbGaP2x, R package to explore and sort phenotypics data from dbGap
 
+You can test this software:
+- Using binder, by clicking the "launch binder" badge above.
+- Using the dockerized version on your local device by running
+
+
+```bash
+docker run -p 80:8888 -v /var/run/docker.sock:/var/run/docker.sock -u root gversmee/dbgap2x
+```
+
+and then open your web browser at http://localhost, and use the password `versmee`
+- Using your local R by installing the package with
+
+
+```R
+devtools::install_github("gversmee/dbGaP2x")
 ## Introduction
 ### Load the package
 
