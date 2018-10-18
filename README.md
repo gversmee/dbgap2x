@@ -20,6 +20,8 @@ and then open your web browser at http://localhost, and use the password `versme
 
 ```R
 devtools::install_github("gversmee/dbGaP2x")
+```
+
 ## Introduction
 ### Load the package
 
