@@ -3,7 +3,7 @@
 [![DOI](https://zenodo.org/badge/153461909.svg)](https://zenodo.org/badge/latestdoi/153461909)
 [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/gversmee/dbgap2x/)
 
-# Using dbGaP2x, R package to explore and sort phenotypics data from dbGap
+# Using dbGaP2x, R package to explore, download and decrypt phenotypics data from dbGaP
 
 You can test this software:
 - Using binder, by clicking the "launch binder" badge above.
