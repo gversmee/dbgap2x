@@ -4,6 +4,7 @@ LABEL maintainer="Gregoire Versmee <gregoire.versmee@gmail.com>"
 
 USER root
 
+RUN echo lol
 RUN git clone https://github.com/gversmee/dbGaP2x
 
 RUN rm -rf /home/$NB_USER/.local && \
