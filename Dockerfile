@@ -10,7 +10,7 @@ RUN rm -rf /home/$NB_USER/.local && \
 fix-permissions $CONDA_DIR && \
 fix-permissions /home/$NB_USER
 
-RUN Rscript -e "install('dbGaP2x')"
+RUN Rscript -e "install('dbGaP2x');print('success')"
 
 RUN apt update -y
 RUN apt install docker.io -y
