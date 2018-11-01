@@ -11,7 +11,7 @@ RUN rm -rf /home/$NB_USER/.local && \
 fix-permissions $CONDA_DIR && \
 fix-permissions /home/$NB_USER
 
-RUN Rscript -e "install.packages('htmlTable');library(htmlTable);install('dbGaP2x');print('success')"
+RUN Rscript -e "install.packages('htmlTable', repos='http://cran.us.r-project.org');library(htmlTable);install('dbGaP2x');print('success')"
 
 RUN apt update -y
 RUN apt install docker.io -y
