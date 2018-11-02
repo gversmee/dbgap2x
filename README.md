@@ -1,5 +1,26 @@
+[![Binder](http://35.229.102.164/badge.svg)](http://35.229.102.164/v2/gh/gversmee/dbGaP2x/master?filepath=dbGaP2x%2FdbGaP2x.ipynb)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![DOI](https://zenodo.org/badge/153461909.svg)](https://zenodo.org/badge/latestdoi/153461909)
+[![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/gversmee/dbgap2x/)
 
 # Using dbGaP2x, R package to explore, download and decrypt phenotypics and genomics data from dbGaP
+
+You can test this software:
+- Using binder, by clicking the "launch binder" badge above.
+- Using the dockerized version on your local device by running
+
+
+```bash
+docker run -p 80:8888 -v /var/run/docker.sock:/var/run/docker.sock -u root gversmee/dbgap2x
+```
+
+and then open your web browser at http://localhost, and use the password `versmee`
+- Using your local R by installing the package with
+
+
+```R
+devtools::install_github("gversmee/dbGaP2x")
+```
 
 ## Introduction
 ### Load the package
@@ -1211,9 +1232,6 @@ files <- "path/to/directory/ofencrypted_files"
 dbgap.decrypt(files, key)
 ```
 
-    Warning message:
-    “running command 'docker exec sratools sh -c "ls -d /root/ncbi/*"' had status 1”
-
 You should see a "decrypted_files" directory in the directory where your encrypted files are located
 
 ### 3.1. Download dbGaP files
@@ -1240,8 +1258,5 @@ key <- "path/to/your/key.ngc"
 cart <- "path/to/your/cartfile.krt"
 dbgap.download(cart, key)
 ```
-
-    Warning message:
-    “running command 'docker exec sratools sh -c "ls -d /root/ncbi/*"' had status 1”
 
 You should see in your working directory a new one name dbGaP-*** that contains your files
