@@ -1,4 +1,4 @@
-FROM gversmee/jupyter-full
+FROM gversmee/jupyter2-full
 
 LABEL maintainer="Gregoire Versmee <gregoire.versmee@gmail.com>"
 
