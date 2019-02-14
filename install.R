@@ -1,5 +1,5 @@
-options(unzip = 'internal')
-.libPaths(c('/opt/conda/lib/R/library'))
+#options(unzip = 'internal')
+#.libPaths(c('/opt/conda/lib/R/library'))
 
 install.packages("devtools")
 install.packages("plyr")
