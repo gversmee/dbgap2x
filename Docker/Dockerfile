@@ -30,21 +30,20 @@ RUN conda install --quiet --yes \
     'r-devtools=1.13*' \
     'r-tidyverse=1.1*' \
     'r-rmarkdown=1.8*' \
-    'r-forecast=8.2*' \
-    'r-rsqlite=2.0*' \
-    'r-reshape2=1.4*' \
+#    'r-forecast=8.2*' \
+#    'r-rsqlite=2.0*' \
+#    'r-reshape2=1.4*' \
     'r-rcurl=1.95*' \
-    'r-crayon=1.3*' \
-    'r-randomforest=4.6*' \
+#    'r-crayon=1.3*' \
+#    'r-randomforest=4.6*' \
     'r-htmltools=0.3*' \
     'r-htmlwidgets=1.0*' \
-    'r-devtools=1.13*' \
 		'r-xml' \
 		'r-data.table' \
 		'r-httr' \
 		'r-rlist' \
-		'r-roxygen2' \
-    'r-ggplot2=2.2*' \
+#		'r-roxygen2' \
+#    'r-ggplot2=2.2*' \
     'r-hexbin=1.27*' && \
     conda clean -tipsy && \
     fix-permissions $CONDA_DIR
@@ -71,9 +70,6 @@ RUN echo "options(unzip = 'internal')" > /home/jovyan/.Rprofile && \
 echo ".libPaths(c('/opt/conda/lib/R/library', '/usr/local/spark-2.3.1-bin-hadoop2.7/R/lib'))" >> /home/jovyan/.Rprofile && \
 echo "library(devtools)" >> /home/jovyan/.Rprofile && \
 echo "library(parallel)" >> /home/jovyan/.Rprofile
-
-#COPY jupyter_notebook_config.py /home/jovyan/.jupyter/
-#COPY .Rprofile /home/jovyan/
 
 RUN git clone https://github.com/gversmee/dbGaP2x
 
