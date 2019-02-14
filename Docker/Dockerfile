@@ -67,9 +67,9 @@ echo "c.FileContentsManager.delete_to_trash = False" >> /home/jovyan/.jupyter/ju
 echo "c.IPKernelApp.pylab = 'inline'" >> /home/jovyan/.jupyter/jupyter_notebook_config.py && \
 echo "c.NotebookApp.password = 'sha1:48b3bade9809:6e4fca934155cb2552e409a895a22534ff61a837'" >> /home/jovyan/.jupyter/jupyter_notebook_config.py
 
-RUN echo "options(unzip = 'internal')" > /home/jovyan/.Rprofile
-echo ".libPaths(c('/opt/conda/lib/R/library', '/usr/local/spark-2.3.1-bin-hadoop2.7/R/lib'))" >> /home/jovyan/.Rprofile
-echo "library(devtools)" >> /home/jovyan/.Rprofile
+RUN echo "options(unzip = 'internal')" > /home/jovyan/.Rprofile && \
+echo ".libPaths(c('/opt/conda/lib/R/library', '/usr/local/spark-2.3.1-bin-hadoop2.7/R/lib'))" >> /home/jovyan/.Rprofile && \
+echo "library(devtools)" >> /home/jovyan/.Rprofile && \
 echo "library(parallel)" >> /home/jovyan/.Rprofile
 
 #COPY jupyter_notebook_config.py /home/jovyan/.jupyter/
