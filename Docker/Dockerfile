@@ -19,10 +19,8 @@ RUN apt-get update && \
     docker.io && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-    
-RUN jupyter labextension install @jupyterlab/hub-extension@^0.12.0
 
-USER $NB_UID
+USER $NB_UID 
 
 # R packages
 RUN conda install --quiet --yes \
@@ -62,6 +60,8 @@ USER root
 RUN rm -rf /home/$NB_USER/.local && \
 fix-permissions $CONDA_DIR && \
 fix-permissions /home/$NB_USER
+
+RUN jupyter labextension install @jupyterlab/hub-extension@^0.12.0
 
 ENV JUPYTER_ENABLE_LAB "ok"
 ENV TAR /bin/tar
