@@ -71,7 +71,7 @@ echo ".libPaths(c('/opt/conda/lib/R/library', '/usr/local/spark-2.3.1-bin-hadoop
 echo "library(devtools)" >> /home/jovyan/.Rprofile && \
 echo "library(parallel)" >> /home/jovyan/.Rprofile
 
-RUN git clone https://github.com/gversmee/dbGaP2x
+RUN git clone https://github.com/gversmee/dbgap2x
 
 RUN Rscript -e "install.packages('htmlTable', repos='http://cran.us.r-project.org');library(htmlTable);install('dbgap2x');print('success')"
 
