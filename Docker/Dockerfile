@@ -60,8 +60,8 @@ RUN jupyter labextension install @jupyterlab/hub-extension@^0.12.0
 ENV JUPYTER_ENABLE_LAB "ok"
 ENV TAR /bin/tar
 
-COPY jupyter_notebook_config.py /home/jovyan/.jupyter/jupyter_notebook_config.py
-COPY Rprofile.R /home/jovyan/.Rprofile
+COPY jupyter_notebook_config.py /home/jovyan/.jupyter/
+COPY .Rprofile /home/jovyan/
 
 RUN git clone https://github.com/gversmee/dbGaP2x
 
