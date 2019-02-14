@@ -1,4 +1,4 @@
-Package: dbGaP2x
+Package: dbgap2x
 Title: Create Sandboxes of Phenotypics Data From dbGap
 Version: 1.0
 Authors@R: c(person("Gregoire", "Versmee", email = "gregoire.versmee@gmail.com", role = c("aut", "cre")),person("Laura", "Versmee", role = c("aut")))

@@ -73,7 +73,7 @@ echo "library(parallel)" >> /home/jovyan/.Rprofile
 
 RUN git clone https://github.com/gversmee/dbGaP2x
 
-RUN Rscript -e "install.packages('htmlTable', repos='http://cran.us.r-project.org');library(htmlTable);install('dbGaP2x');print('success')"
+RUN Rscript -e "install.packages('htmlTable', repos='http://cran.us.r-project.org');library(htmlTable);install('dbgap2x');print('success')"
 
 RUN usermod -aG docker jovyan
 
@@ -81,4 +81,4 @@ CMD chgrp docker /var/run/docker.sock && start-notebook.sh
 
 USER $NB_UID
 
-WORKDIR $HOME/dbGaP2x
+WORKDIR $HOME/dbgap2x
