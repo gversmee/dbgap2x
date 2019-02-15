@@ -3,7 +3,7 @@
 [![DOI](https://zenodo.org/badge/153461909.svg)](https://zenodo.org/badge/latestdoi/153461909)
 [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/gversmee/dbgap2x/)
 
-# Using dbGaP2x, R package to explore, download and decrypt phenotypics and genomics data from dbGaP
+# Using dbgap2x, R package to explore, download and decrypt phenotypics and genomics data from dbGaP
 
 You can test this software:
 - Using binder, by clicking the "launch binder" badge above.
@@ -19,7 +19,7 @@ and then open your web browser at http://localhost, and use the password `dbgap2
 
 
 ```R
-devtools::install_github("gversmee/dbGaP2x")
+devtools::install_github("gversmee/dbgap2x")
 ```
 
 ## Introduction
@@ -27,15 +27,15 @@ devtools::install_github("gversmee/dbGaP2x")
 
 
 ```R
-#devtools::install_github("gversmee/dbGaP2x", force = TRUE)
-library(dbGaP2x)
+#devtools::install_github("gversmee/dbgap2x", force = TRUE)
+library(dbgap2x)
 ```
 
 ### Get the list of the function for this new package
 
 
 ```R
-lsf.str("package:dbGaP2x")
+lsf.str("package:dbgap2x")
 ```
 
 

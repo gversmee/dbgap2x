@@ -1,4 +1,4 @@
-install.packages("xml")
+install.packages("XML")
 install.packages("data.table")
 install.packages("httr")
 install.packages("rlist")

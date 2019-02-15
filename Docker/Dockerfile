@@ -26,25 +26,17 @@ USER $NB_UID
 RUN conda install --quiet --yes \
     'r-base=3.4.1' \
     'r-irkernel=0.8*' \
-    'r-plyr=1.8*' \
+#    'r-plyr=1.8*' \
     'r-devtools=1.13*' \
-    'r-tidyverse=1.1*' \
-    'r-rmarkdown=1.8*' \
-#    'r-forecast=8.2*' \
-#    'r-rsqlite=2.0*' \
-#    'r-reshape2=1.4*' \
+#    'r-tidyverse=1.1*' \
+#    'r-rmarkdown=1.8*' \
     'r-rcurl=1.95*' \
-#    'r-crayon=1.3*' \
-#    'r-randomforest=4.6*' \
     'r-htmltools=0.3*' \
     'r-htmlwidgets=1.0*' \
 		'r-xml' \
 		'r-data.table' \
 		'r-httr' \
-		'r-rlist' \
-#		'r-roxygen2' \
-#    'r-ggplot2=2.2*' \
-    'r-hexbin=1.27*' && \
+		'r-rlist' && \
     conda clean -tipsy && \
     fix-permissions $CONDA_DIR
 		
