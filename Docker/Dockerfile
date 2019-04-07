@@ -68,6 +68,11 @@ RUN git clone https://github.com/gversmee/dbgap2x
 RUN Rscript -e "install.packages('htmlTable', repos='http://cran.us.r-project.org');library(htmlTable);install('dbgap2x');print('success')"
 
 RUN usermod -aG docker jovyan
+RUN chown -R jovyan /home/jovyan/dbgap2x
+RUN chmod -R 4775 /home/jovyan/dbgap2x
+RUN jupyter trust /home/jovyan/dbgap2x/dbgap2x.ipynb
+RUN fix-permissions $CONDA_DIR && \
+fix-permissions /home/$NB_USER
 
 CMD chgrp docker /var/run/docker.sock && start-notebook.sh
 
