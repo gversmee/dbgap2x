@@ -16,5 +16,5 @@ Return the number of phenotypic datatables in the study
 This function extracts informations from data.dict.xml files from the dbgap ftp server to get the study characteristics. Works only for a parent study.
 }
 \author{
-Gregoire Versmee, Laura Versmee
+Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 }

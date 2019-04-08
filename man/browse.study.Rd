@@ -4,7 +4,7 @@
 \alias{browse.study}
 \title{Open the study webpage in a web browser}
 \usage{
-browse.study(phs, jupyter = FALSE)
+browse.study(phs, no.browser = FALSE)
 }
 \arguments{
 \item{phs}{dbGap study ID (phs00xxxx, or 00xxxx, or xxx)}
@@ -18,5 +18,5 @@ Open the study webpage in a web browser
 Open the study webpage in a web browser
 }
 \author{
-Gregoire Versmee, Laura Versmee
+Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 }

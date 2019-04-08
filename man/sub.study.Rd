@@ -16,5 +16,5 @@ Returns a dataframe with 2 cols : the phs id and the name of the substudy
 Gives the substudies associated with the one selected
 }
 \author{
-Gregoire Versmee, Laura Versmee
+Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 }

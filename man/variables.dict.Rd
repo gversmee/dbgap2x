@@ -16,5 +16,5 @@ a data.frame with 4 cols : variable identifier (dbGap), table name, variable nam
 This function extracts informations from data.dict.xml files from the dbgap ftp server to create a variable dictionnary.
 }
 \author{
-Gregoire Versmee, Laura Versmee
+Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 }

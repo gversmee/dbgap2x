@@ -16,5 +16,5 @@ Returns the full name of the study
 Gets you the full name of the study on dbGap
 }
 \author{
-Gregoire Versmee, Laura Versmee
+Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 }

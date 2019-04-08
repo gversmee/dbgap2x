@@ -4,7 +4,7 @@
 \alias{browse.dbgap}
 \title{Open the dbGap webpag of your study in your browser}
 \usage{
-browse.dbgap(phs, jupyter = FALSE)
+browse.dbgap(phs, no.browser = FALSE)
 }
 \arguments{
 \item{phs}{dbGap study ID (phs00xxxx, or 00xxxx, or xxx)}
@@ -18,5 +18,5 @@ Open the dbGap webpag of your study in your browser
 Open the dbGap webpag of your study in your browser
 }
 \author{
-Gregoire Versmee, Laura Versmee
+Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 }

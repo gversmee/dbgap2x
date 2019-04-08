@@ -18,5 +18,5 @@ a data.frame with 2 cols : name of the consent group and n total. Possibility to
 This function extracts informations from data.dict.xml files from the dbgap ftp server to get the population characteristics. Works only for parents studies.
 }
 \author{
-Gregoire Versmee, Laura Versmee
+Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 }

@@ -16,5 +16,5 @@ Returns a logical TRUE if the study is a parent, and false if the study is a chi
 Is the study a parent or a child study
 }
 \author{
-Gregoire Versmee, Laura Versmee
+Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 }

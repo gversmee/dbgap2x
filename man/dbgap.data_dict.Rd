@@ -18,5 +18,5 @@ dbgap.data_dict(xml, dest)
 This function extracts informations from data.dict xml files in dbgap to create table dictionnary and a variable dictionnary.
 }
 \author{
-Gregoire Versmee, Laura Versmee
+Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 }

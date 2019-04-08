@@ -4,7 +4,7 @@
 \alias{search.dbgap}
 \title{Open the results of your search on dbGap}
 \usage{
-search.dbgap(term, jupyter = FALSE)
+search.dbgap(term, no.browser = FALSE)
 }
 \arguments{
 \item{term}{Term of your search}
@@ -18,5 +18,5 @@ Open the results of your search on dbGap
 Open the results of your search on dbGap
 }
 \author{
-Gregoire Versmee, Laura Versmee
+Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 }

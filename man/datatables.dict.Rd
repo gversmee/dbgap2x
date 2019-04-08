@@ -16,5 +16,5 @@ a data.frame with 3 cols : XXXXX
 This function extracts informations from data.dict.xml files from the dbgap ftp server to create a table dictionnary.
 }
 \author{
-Gregoire Versmee, Laura Versmee
+Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 }

@@ -16,5 +16,5 @@ Returns a data frame with 3 cols : "consent group number", "cg short name" and "
 Gets you the list of the consent groups of the study
 }
 \author{
-Gregoire Versmee, Laura Versmee
+Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 }

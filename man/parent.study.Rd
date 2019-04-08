@@ -16,5 +16,5 @@ Returns the phs id of the latest version of the parent study, and its full name.
 Gets you the parent study of the specified study
 }
 \author{
-Gregoire Versmee, Laura Versmee
+Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 }

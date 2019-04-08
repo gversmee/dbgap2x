@@ -16,5 +16,5 @@ Returns the full ID of the latest version of your study
 Gets you the full dbGap study ID of your study, with the latest version
 }
 \author{
-Gregoire Versmee, Laura Versmee
+Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 }
