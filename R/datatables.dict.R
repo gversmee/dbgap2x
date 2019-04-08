@@ -9,7 +9,7 @@
 #' @import RCurl
 #' @import parallel
 #'
-#' @author Gregoire Versmee, Laura Versmee
+#' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 #' @export
 
 datatables.dict <-function (phs)  {

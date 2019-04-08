@@ -4,7 +4,7 @@
 #'
 #' @return Returns a logical TRUE if the study is a parent, and false if the study is a child
 #'
-#' @author Gregoire Versmee, Laura Versmee
+#' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 #' @export
 
 

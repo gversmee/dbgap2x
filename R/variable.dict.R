@@ -10,7 +10,7 @@
 #' @import parallel
 #' @import data.table
 #'
-#' @author Gregoire Versmee, Laura Versmee
+#' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 #' @export
 
 variables.dict <-function (phs)  {

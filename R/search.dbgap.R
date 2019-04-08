@@ -5,17 +5,17 @@
 #'
 #' @return Open the results of your search on dbGap
 #'
-#' @author Gregoire Versmee, Laura Versmee
+#' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 
 #' @export
 
 
-search.dbgap <- function(term, jupyter = FALSE)  {
+search.dbgap <- function(term, no.browser = FALSE)  {
 
   url <- paste0("https://www.ncbi.nlm.nih.gov/gap/?term=", term,  "%5BStudy+Name%5D")
 
-  if (jupyter == FALSE)  browseURL(url)
-  if (jupyter == TRUE)  return(url)
+  if (no.browser == FALSE)  browseURL(url)
+  if (no.browser == TRUE)  return(url)
 
 }
 

@@ -5,15 +5,15 @@
 #'
 #' @return Open the dbGap webpag of your study in your browser
 #'
-#' @author Gregoire Versmee, Laura Versmee
+#' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 
 #' @export
 
 
-browse.dbgap <- function(phs, jupyter = FALSE)  {
+browse.dbgap <- function(phs, no.browser = FALSE)  {
 
   url <- paste0("https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=", phs.version(phs))
 
-  if (jupyter)  return(url)  else   browseURL(url)
+  if (no.browser)  return(url)  else  browseURL(url)
 }
 

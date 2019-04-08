@@ -4,7 +4,7 @@
 #'
 #' @return Returns a data frame with 3 cols : "consent group number", "cg short name" and "cg long name"
 #'
-#' @author Gregoire Versmee, Laura Versmee
+#' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 
 #' @export
 

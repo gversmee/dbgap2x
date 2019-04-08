@@ -4,7 +4,7 @@
 #'
 #' @return Returns the full ID of the latest version of your study
 #'
-#' @author Gregoire Versmee, Laura Versmee
+#' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 #' @import httr
 #' @export
 

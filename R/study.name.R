@@ -4,7 +4,7 @@
 #'
 #' @return Returns the full name of the study
 #'
-#' @author Gregoire Versmee, Laura Versmee
+#' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 
 #' @export
 

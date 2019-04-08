@@ -4,7 +4,7 @@
 #'
 #' @return Returns a dataframe with 2 cols : the phs id and the name of the substudy
 #'
-#' @author Gregoire Versmee, Laura Versmee
+#' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 #' @export
 
 sub.study <- function(phs)  {

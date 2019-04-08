@@ -8,7 +8,7 @@
 #' @description This function extracts informations from data.dict xml files in dbgap to create table dictionnary and a variable dictionnary.
 #' @import XML
 #'
-#' @author Gregoire Versmee, Laura Versmee
+#' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 #' @export
 
 dbgap.data_dict <-function (xml, dest)  {

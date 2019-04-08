@@ -9,7 +9,7 @@
 #' @import XML
 #' @import RCurl
 #'
-#' @author Gregoire Versmee, Laura Versmee
+#' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 #' @export
 
 n.pop <- function(phs, consentgroups = TRUE, gender = TRUE)  {
