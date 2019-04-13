@@ -1,7 +1,7 @@
 Package: dbgap2x
 Title: dbGaP to eXtract and eXplore
 Version: 1.0
-Authors@R: c(person("Gregoire", "Versmee", email = "gregoire.versmee@gmail.com", role = c("aut", "cre")),
+Authors@R: c(person("Gregoire", "Versmee", email = "gversmee@mail.harvard.edu", role = c("aut", "cre")),
 	     person("Laura", "Versmee", role = "aut"),
 	     person("Mikael", "Dusenne", role = "aut"),
 	     person("Niloofar", "Jalali", role = "aut"))
