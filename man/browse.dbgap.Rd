@@ -2,20 +2,20 @@
 % Please edit documentation in R/browse.dbgap.R
 \name{browse.dbgap}
 \alias{browse.dbgap}
-\title{Open the dbGap webpag of your study in your browser}
+\title{Open the dbGap webpage of your study in your browser}
 \usage{
 browse.dbgap(phs, no.browser = FALSE)
 }
 \arguments{
 \item{phs}{dbGap study ID (phs00xxxx, or 00xxxx, or xxx)}
 
-\item{jupyter}{set on TRUE if you are in a jypyterhub environment}
+\item{no.browser}{set on TRUE will just display the URL}
 }
 \value{
-Open the dbGap webpag of your study in your browser
+Opens the dbGaP webpage of your study in your browser
 }
 \description{
-Open the dbGap webpag of your study in your browser
+Open the dbGap webpage of your study in your browser
 }
 \author{
 Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali

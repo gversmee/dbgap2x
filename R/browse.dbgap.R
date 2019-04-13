@@ -1,9 +1,9 @@
-#' @title Open the dbGap webpag of your study in your browser
+#' @title Open the dbGap webpage of your study in your browser
 #'
 #' @param phs dbGap study ID (phs00xxxx, or 00xxxx, or xxx)
-#' @param jupyter set on TRUE if you are in a jypyterhub environment
+#' @param no.browser set on TRUE will just display the URL
 #'
-#' @return Open the dbGap webpag of your study in your browser
+#' @return Opens the dbGaP webpage of your study in your browser
 #'
 #' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 

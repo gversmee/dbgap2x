@@ -2,20 +2,20 @@
 % Please edit documentation in R/browse.study.R
 \name{browse.study}
 \alias{browse.study}
-\title{Open the study webpage in a web browser}
+\title{Opens the study webpage in a web browser}
 \usage{
 browse.study(phs, no.browser = FALSE)
 }
 \arguments{
 \item{phs}{dbGap study ID (phs00xxxx, or 00xxxx, or xxx)}
 
-\item{jupyter}{set on TRUE if you are in a jypyterhub environment}
+\item{no.browser}{set on TRUE will just display the URL}
 }
 \value{
 Open the study webpage in a web browser
 }
 \description{
-Open the study webpage in a web browser
+Opens the study webpage in a web browser
 }
 \author{
 Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali

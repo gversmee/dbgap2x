@@ -1,7 +1,7 @@
-#' @title Open the results of your search on dbGap
+#' @title Opens the results of your search on dbGaP
 #'
 #' @param term Term of your search
-#' @param jupyter set on TRUE if you are in a jypyterhub environment
+#' @param no.browser set on TRUE will just display the URL
 #'
 #' @return Open the results of your search on dbGap
 #'

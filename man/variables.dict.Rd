@@ -2,7 +2,7 @@
 % Please edit documentation in R/variable.dict.R
 \name{variables.dict}
 \alias{variables.dict}
-\title{Create a variables dictionnary of your study}
+\title{Creates a variables dictionnary of your study}
 \usage{
 variables.dict(phs)
 }

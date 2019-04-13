@@ -7,7 +7,7 @@
 datatables.dict(phs)
 }
 \arguments{
-\item{phs}{dbGap ID of your study "phs000000". No version please, as it will automatically return the latest one.}
+\item{phs}{dbGap study ID (phs00xxxx, or 00xxxx, or xxx)}
 }
 \value{
 a data.frame with 3 cols : XXXXX

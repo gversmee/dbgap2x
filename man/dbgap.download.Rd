@@ -2,18 +2,20 @@
 % Please edit documentation in R/dbgap.download.R
 \name{dbgap.download}
 \alias{dbgap.download}
-\title{Decrypt ncbi_enc files}
+\title{Downloads and decrypts dbGaP files}
 \usage{
 dbgap.download(krt, key = FALSE)
 }
 \arguments{
-\item{file}{file or folder where your encrypted files are located}
+\item{krt}{path/to/your/cart.krt file generated from the dbGaP website}
+
+\item{key}{path/to/yourkey.ngc file}
 }
 \value{
-Decrypt the file(s) and replace it in the same folder
+A folder named dbGaP-*** in your working directory that contains your decrypted files
 }
 \description{
-This function decrypts dbGap files (*ncbi_enc) using your personnal key. Be careful, it can replace the settings of your "vdb-info" file
+This function downloads and decrypts dbGaP files
 }
 \author{
 Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali

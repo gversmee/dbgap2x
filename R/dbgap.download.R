@@ -1,9 +1,10 @@
-#' @title Decrypt ncbi_enc files
+#' @title Downloads and decrypts dbGaP files
 #'
-#' @return Decrypt the file(s) and replace it in the same folder
-#' @param file file or folder where your encrypted files are located
+#' @return A folder named dbGaP-*** in your working directory that contains your decrypted files
+#' @param krt path/to/your/cart.krt file generated from the dbGaP website
+#' @param key path/to/yourkey.ngc file
 #'
-#' @description This function decrypts dbGap files (*ncbi_enc) using your personnal key. Be careful, it can replace the settings of your "vdb-info" file
+#' @description This function downloads and decrypts dbGaP files
 #'
 #' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 #' @export

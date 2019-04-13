@@ -1,6 +1,6 @@
 #' @title Create a tables dictionnary of your study
 #'
-#' @param phs dbGap ID of your study "phs000000". No version please, as it will automatically return the latest one.
+#' @param phs dbGap study ID (phs00xxxx, or 00xxxx, or xxx)
 #'
 #' @return a data.frame with 3 cols : XXXXX
 #'

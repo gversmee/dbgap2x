@@ -2,20 +2,20 @@
 % Please edit documentation in R/search.dbgap.R
 \name{search.dbgap}
 \alias{search.dbgap}
-\title{Open the results of your search on dbGap}
+\title{Opens the results of your search on dbGaP}
 \usage{
 search.dbgap(term, no.browser = FALSE)
 }
 \arguments{
 \item{term}{Term of your search}
 
-\item{jupyter}{set on TRUE if you are in a jypyterhub environment}
+\item{no.browser}{set on TRUE will just display the URL}
 }
 \value{
 Open the results of your search on dbGap
 }
 \description{
-Open the results of your search on dbGap
+Opens the results of your search on dbGaP
 }
 \author{
 Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali

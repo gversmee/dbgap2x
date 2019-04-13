@@ -1,7 +1,7 @@
-#' @title Open the study webpage in a web browser
+#' @title Opens the study webpage in a web browser
 #'
 #' @param phs dbGap study ID (phs00xxxx, or 00xxxx, or xxx)
-#' @param jupyter set on TRUE if you are in a jypyterhub environment
+#' @param no.browser set on TRUE will just display the URL
 #'
 #' @return Open the study webpage in a web browser
 #'

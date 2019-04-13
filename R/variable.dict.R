@@ -1,4 +1,4 @@
-#' @title Create a variables dictionnary of your study
+#' @title Creates a variables dictionnary of your study
 #'
 #' @param phs dbGap study ID (phs00xxxx, or 00xxxx, or xxx)
 #'
