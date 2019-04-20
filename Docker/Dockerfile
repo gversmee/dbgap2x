@@ -26,17 +26,14 @@ USER $NB_UID
 RUN conda install --quiet --yes \
     'r-base=3.4.1' \
     'r-irkernel=0.8*' \
-#    'r-plyr=1.8*' \
-    'r-devtools=1.13*' \
-#    'r-tidyverse=1.1*' \
-#    'r-rmarkdown=1.8*' \
+    'r-devtools=1.13*' \\
     'r-rcurl=1.95*' \
     'r-htmltools=0.3*' \
     'r-htmlwidgets=1.0*' \
-		'r-xml' \
-		'r-data.table' \
-		'r-httr' \
-		'r-rlist' && \
+    'r-xml' \
+    'r-data.table' \
+    'r-httr' \
+    'r-rlist' && \
     conda clean -tipsy && \
     fix-permissions $CONDA_DIR
 		
@@ -79,3 +76,5 @@ CMD chgrp docker /var/run/docker.sock && start-notebook.sh
 USER $NB_UID
 
 WORKDIR $HOME/dbgap2x
+
+USER root
