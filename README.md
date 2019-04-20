@@ -11,7 +11,7 @@ You can test this software:
 
 
 ```bash
-docker run -p 80:8888 -v /var/run/docker.sock:/var/run/docker.sock -u root gversmee/dbgap2x
+docker run -p 80:8888 -v /var/run/docker.sock:/var/run/docker.sock  gversmee/dbgap2x
 ```
 
 and then open your web browser at http://localhost, and use the password `dbgap2x`

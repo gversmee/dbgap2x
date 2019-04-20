@@ -26,7 +26,7 @@ USER $NB_UID
 RUN conda install --quiet --yes \
     'r-base=3.4.1' \
     'r-irkernel=0.8*' \
-    'r-devtools=1.13*' \\
+    'r-devtools=1.13*' \
     'r-rcurl=1.95*' \
     'r-htmltools=0.3*' \
     'r-htmlwidgets=1.0*' \
