@@ -13,7 +13,7 @@
 search.dbgap <- function(term, no.browser = FALSE)  {
 
   url <- paste0("https://www.ncbi.nlm.nih.gov/gap/?term=", term,  "%5BStudy+Name%5D")
-
+  getOption("browser")
   if (no.browser == FALSE)  browseURL(url)
   if (no.browser == TRUE)  return(url)
 
