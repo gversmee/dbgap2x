@@ -15,10 +15,9 @@ n.variables <- function(phs)  {
 
     phenodir <- pheno.dir(phs)
     
-    filelist <- RCurl::getURL(phenodir, ftp.use.epsv = FALSE, dirlistonly = TRUE, crlf=TRUE)
-    filelist <- strsplit(filelist, "\r*\n")[[1]]
-    
-  temp <- list.tables(filelist)
+    filelist <- file.list(phenodir)
+
+    temp <- list.tables(filelist)
 
   mcl <- parallel::mclapply(temp, function(e) {
     xmllist <- XML::xmlToList(RCurl::getURLContent(paste0(phenodir, e)))
