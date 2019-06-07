@@ -27,5 +27,28 @@ n.variables <- function(phs)  {
     return(length(which(names(xmllist) == "variable")))
   }, mc.cores = getOption("mc.cores", parallel::detectCores()))
 
-  return(Reduce(sum, mcl))
+    return(Reduce(sum, mcl))
+
+  ##     phs <- phs.version(phs)
+  ## url<- paste0("ftp://anonymous:anonymous@ftp.ncbi.nlm.nih.gov/dbgap/studies/", unlist(strsplit(phs, "\\."))[1], "/", phs, "/")
+
+  ## filenames <- file.names(url)
+  ## phenodir <- paste0(url, filenames[grep("pheno", filenames)], "/")
+  ## filelist <- file.list( phenodir )
+    
+  ## return(cache.call(
+  ##     match.call()[[1]],
+  ##     phs, {
+  ##         temp <- filelist[(grepl(".data_dict.xml", filelist)) & (!grepl("Sample_Attributes.data_dict.xml", filelist)) &
+  ##                          (!grepl("Subject.data_dict.xml", filelist)) & (!grepl("Sample.data_dict.xml", filelist)) & (!grepl("Pedigree.data_dict.xml", filelist))]
+
+          
+  ##         mcl <- parallel::mclapply(temp, function(e) {
+  ##             xmllist <- XML::xmlToList(RCurl::getURLContent(paste0(phenodir, e)))
+  ##             return(length(which(names(xmllist) == "variable")))
+  ##         }, mc.cores = getOption("mc.cores", parallel::detectCores()))
+          
+  ##         Reduce(sum, mcl)
+  ##     }))
+
 }

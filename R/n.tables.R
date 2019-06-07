@@ -24,5 +24,17 @@ n.tables <- function(phs)  {
 
   return(length(filelist[(grepl(".data_dict.xml", filelist)) & (!grepl("Sample_Attributes.data_dict.xml", filelist)) &
                            (!grepl("Subject.data_dict.xml", filelist)) & (!grepl("Sample.data_dict.xml", filelist)) &
-                           (!grepl("Pedigree.data_dict.xml", filelist))]))
+                         (!grepl("Pedigree.data_dict.xml", filelist))]))
+
+
+  ##     phs <- phs.version(phs)
+  ## url<- paste0("ftp://anonymous:anonymous@ftp.ncbi.nlm.nih.gov/dbgap/studies/", unlist(strsplit(phs, "\\."))[1], "/", phs, "/")
+  ## filenames <- file.names(url)
+
+  ## filelist <- file.list( filenames[grepl("pheno", filenames)] )
+    
+  ## return(length(filelist[(grepl(".data_dict.xml", filelist)) & (!grepl("Sample_Attributes.data_dict.xml", filelist)) &
+  ##                          (!grepl("Subject.data_dict.xml", filelist)) & (!grepl("Sample.data_dict.xml", filelist)) &
+  ##                          (!grepl("Pedigree.data_dict.xml", filelist))]))
+
 }
