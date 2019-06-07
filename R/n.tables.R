@@ -14,17 +14,22 @@ n.tables <- function(phs)  {
 
   phs <- phs.version(phs)
   url<- paste0("ftp://anonymous:anonymous@ftp.ncbi.nlm.nih.gov/dbgap/studies/", unlist(strsplit(phs, "\\."))[1], "/", phs, "/")
-  filenames <- RCurl::getURL(url, ftp.use.epsv = FALSE, dirlistonly = TRUE, crlf = TRUE)
-  filenames <- paste(url, strsplit(filenames, "\r*\n")[[1]], sep = "")
 
-  phenodir <- filenames[grepl("pheno", filenames)]
+  ## filenames <- RCurl::getURL(url, ftp.use.epsv = FALSE, dirlistonly = TRUE, crlf = TRUE)
+  ## filenames <- paste(url, strsplit(filenames, "\r*\n")[[1]], sep = "")
+  ## phenodir <- filenames[grepl("pheno", filenames)]
+  ## filelist <- RCurl::getURL(paste0(phenodir, "/"), ftp.use.epsv = FALSE, dirlistonly = TRUE, crlf = TRUE)
+  ## filelist <- paste(phenodir, "/", strsplit(filelist, "\r*\n")[[1]], sep = "")
 
-  filelist <- RCurl::getURL(paste0(phenodir, "/"), ftp.use.epsv = FALSE, dirlistonly = TRUE, crlf = TRUE)
-  filelist <- paste(phenodir, "/", strsplit(filelist, "\r*\n")[[1]], sep = "")
+    filenames <- RCurl::getURL(url, ftp.use.epsv = FALSE, dirlistonly = TRUE, crlf = TRUE)
+    filenames <- strsplit(filenames, "\r*\n")[[1]]
+    phenodir <- paste0(url, filenames[grep("pheno", filenames)], "/")
+    
+    filelist <- RCurl::getURL(phenodir, ftp.use.epsv = FALSE, dirlistonly = TRUE, crlf=TRUE)
+    filelist <- strsplit(filelist, "\r*\n")[[1]]
 
-  return(length(filelist[(grepl(".data_dict.xml", filelist)) & (!grepl("Sample_Attributes.data_dict.xml", filelist)) &
-                           (!grepl("Subject.data_dict.xml", filelist)) & (!grepl("Sample.data_dict.xml", filelist)) &
-                         (!grepl("Pedigree.data_dict.xml", filelist))]))
+    
+  return(length(list.tables(filelist)))
 
 
   ##     phs <- phs.version(phs)
