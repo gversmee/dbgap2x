@@ -10,7 +10,7 @@ cache.call = function(fname, arg, expr){
 
     substitute(expr)
 
-    is.ok <- function(e) difftime(Sys.time(), t,units="days") >= 1
+    is.ok <- function(e) difftime(Sys.time(), e$time,units="days") < 1
     
     ## only works for character or numeric arguments
     if(! (all(class(arg) %in% c("character", "numeric"))) ){
@@ -38,7 +38,7 @@ cache.call = function(fname, arg, expr){
             assign(arg,
                    list(
                        value = ans,
-                       date = Sys.time()),
+                       time = Sys.time()),
                    cacheEnv)
         }    
     }
