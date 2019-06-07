@@ -12,17 +12,21 @@
 
 
 n.variables <- function(phs)  {
+    cache.call(
+        match.call()[[1]],
+        phs, {
 
-    phenodir <- pheno.dir(phs)
-    
-    filelist <- file.list(phenodir)
+            phenodir <- pheno.dir(phs)
+            
+            filelist <- file.list(phenodir)
 
-    temp <- list.tables(filelist)
+            temp <- list.tables(filelist)
 
-  mcl <- parallel::mclapply(temp, function(e) {
-    xmllist <- XML::xmlToList(RCurl::getURLContent(paste0(phenodir, e)))
-    return(length(which(names(xmllist) == "variable")))
-  }, mc.cores = getOption("mc.cores", parallel::detectCores()))
+            mcl <- parallel::mclapply(temp, function(e) {
+                xmllist <- XML::xmlToList(RCurl::getURLContent(paste0(phenodir, e)))
+                return(length(which(names(xmllist) == "variable")))
+            }, mc.cores = getOption("mc.cores", parallel::detectCores()))
 
-    return(Reduce(sum, mcl))
+            Reduce(sum, mcl)
+        })
 }
