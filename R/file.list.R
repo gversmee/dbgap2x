@@ -4,7 +4,12 @@
 #' @export
 
 file.list <- function(phenodir){
-    filelist <- RCurl::getURL(phenodir, ftp.use.epsv = FALSE, dirlistonly = TRUE, crlf=TRUE)
-    filelist <- strsplit(filelist, "\r*\n")[[1]]
-    filelist
+    cache.call(
+        match.call()[[1]],
+        phenodir, {
+            
+            filelist <- RCurl::getURL(phenodir, ftp.use.epsv = FALSE, dirlistonly = TRUE, crlf=TRUE)
+            filelist <- strsplit(filelist, "\r*\n")[[1]]
+            filelist
+        })            
 }
