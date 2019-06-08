@@ -11,22 +11,7 @@
 #' @export
 
 
-n.variables <- function(phs)  {
-    cache.call(
-        match.call()[[1]],
-        phs, {
-
-            phenodir <- pheno.dir(phs)
-            
-            filelist <- file.list(phenodir)
-
-            temp <- list.tables(filelist)
-
-            mcl <- parallel::mclapply(temp, function(e) {
-                xmllist <- XML::xmlToList(RCurl::getURLContent(paste0(phenodir, e)))
-                return(length(which(names(xmllist) == "variable")))
-            }, mc.cores = getOption("mc.cores", parallel::detectCores()))
-
-            Reduce(sum, mcl)
-        })
+n.variables <- function(...)  {
+    length(list.variables(...))
 }
+
