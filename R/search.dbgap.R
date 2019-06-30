@@ -31,7 +31,7 @@ search.dbgap <- function(term, no.browser = FALSE)  {
     get.json = function(querytype, ...){
         resp = httr::GET(build.url(querytype),
                          query=build.params(...))
-        content(resp, as="parsed")
+        httr::content(resp, as="parsed")
     }
 
     search.ids = function(term, type=result.category){
