@@ -1,32 +1,35 @@
-FROM jupyter/minimal-notebook
+FROM jupyter/base-notebook
 
 LABEL maintainer="Gregoire Versmee <gregoire.versmee@gmail.com>"
 
 USER root
 
-# R pre-requisites
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-		libapparmor1 \
-		libedit2 \
-		lsb-release \
-		psmisc \
-		libssl1.0.0 \
+    libapparmor1 \
+    libedit2 \
+    lsb-release \
+    psmisc \
+    libssl1.0.0 \
     fonts-dejavu \
-    tzdata \
-    gfortran \
-    gcc \
+#   tzdata \
+#    unixodbc \
+#    unixodbc-dev \
+#    r-cran-rodbc \
+#    gfortran \
+#    gcc \
+    git \
     docker.io && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+    
+RUN service docker start
 
 USER $NB_UID 
 
-# R packages
 RUN conda install --quiet --yes \
     'r-base=3.4.1' \
     'r-irkernel=0.8*' \
-    'r-devtools=1.13*' \
     'r-rcurl=1.95*' \
     'r-htmltools=0.3*' \
     'r-htmlwidgets=1.0*' \
@@ -34,47 +37,27 @@ RUN conda install --quiet --yes \
     'r-data.table' \
     'r-httr' \
     'r-rlist' && \
-    conda clean -tipsy && \
+    conda clean --all -f -y && \
     fix-permissions $CONDA_DIR
-		
+
+RUN echo "c = get_config()\n\
+c.NotebookApp.ip = '0.0.0.0'\n\
+c.NotebookApp.port = 8888\n\
+c.FileContentsManager.delete_to_trash = False\n\
+c.IPKernelApp.pylab = 'inline'\n\
+c.NotebookApp.password = 'sha1:48b3bade9809:6e4fca934155cb2552e409a895a22534ff61a837'" > $HOME/.jupyter/jupyter_notebook_config.py 
+
 USER root
 
-RUN rm -rf /home/$NB_USER/.local && \
+RUN git clone https://github.com/gversmee/dbgap2x $HOME/dbgap2x && \
+Rscript -e "install.packages('$HOME/dbgap2x', repos = NULL, type = 'source')"
+
+RUN usermod -aG docker $NB_USER && \
+chown -R $NB_USER $HOME/dbgap2x && \
+chmod -R 4775 $HOME/dbgap2x && \
+jupyter trust $HOME/dbgap2x/dbgap2x.ipynb && \
+rm -rf $HOME/.local && \
 fix-permissions $CONDA_DIR && \
-fix-permissions /home/$NB_USER
-
-RUN jupyter labextension install @jupyterlab/hub-extension@^0.12.0
-
-ENV JUPYTER_ENABLE_LAB "ok"
-ENV TAR /bin/tar
-
-RUN echo "c = get_config()" > /home/jovyan/.jupyter/jupyter_notebook_config.py && \
-echo "c.NotebookApp.ip = '0.0.0.0'" >> /home/jovyan/.jupyter/jupyter_notebook_config.py && \
-echo "c.NotebookApp.port = 8888" >> /home/jovyan/.jupyter/jupyter_notebook_config.py && \
-echo "c.FileContentsManager.delete_to_trash = False" >> /home/jovyan/.jupyter/jupyter_notebook_config.py && \
-echo "c.IPKernelApp.pylab = 'inline'" >> /home/jovyan/.jupyter/jupyter_notebook_config.py && \
-echo "c.NotebookApp.password = 'sha1:48b3bade9809:6e4fca934155cb2552e409a895a22534ff61a837'" >> /home/jovyan/.jupyter/jupyter_notebook_config.py
-
-RUN echo "options(unzip = 'internal')" > /home/jovyan/.Rprofile && \
-echo ".libPaths(c('/opt/conda/lib/R/library', '/usr/local/spark-2.3.1-bin-hadoop2.7/R/lib'))" >> /home/jovyan/.Rprofile && \
-echo "library(devtools)" >> /home/jovyan/.Rprofile && \
-echo "library(parallel)" >> /home/jovyan/.Rprofile
-
-RUN git clone https://github.com/gversmee/dbgap2x
-
-RUN Rscript -e "install.packages('htmlTable', repos='http://cran.us.r-project.org');library(htmlTable);install('dbgap2x');print('success')"
-
-RUN usermod -aG docker jovyan
-RUN chown -R jovyan /home/jovyan/dbgap2x
-RUN chmod -R 4775 /home/jovyan/dbgap2x
-RUN jupyter trust /home/jovyan/dbgap2x/dbgap2x.ipynb
-RUN fix-permissions $CONDA_DIR && \
-fix-permissions /home/$NB_USER
-
-CMD chgrp docker /var/run/docker.sock && start-notebook.sh
-
-USER $NB_UID
+fix-permissions $HOME
 
 WORKDIR $HOME/dbgap2x
-
-USER root
