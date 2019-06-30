@@ -34,7 +34,7 @@ search.dbgap <- function(term, no.browser = FALSE)  {
         httr::content(resp, as="parsed")
     }
 
-    search.ids = function(term, type=result.category){
+    search.ids = function(term, type=c("study", "variable", "document", "analyse", "dataset")){
         type = which(result.category == match.arg(type))
         term = sprintf( "%d[s_discriminator] AND (%s)", type, term )
 
