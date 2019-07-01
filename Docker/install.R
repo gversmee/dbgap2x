@@ -1,6 +1,0 @@
-install.packages("XML")
-install.packages("data.table")
-install.packages("httr")
-install.packages("rlist")
-install.packages("htmlTable")
-install.packages("RCurl")
