@@ -11,7 +11,7 @@
 #' @export
 
 
-list.variables <- function(phs, useftp=T)  {
+list.variables <- function(phs, useftp=F)  {
     phs <- phs.version(phs)
     cache.call(
         match.call()[[1]],
