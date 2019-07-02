@@ -9,19 +9,25 @@
 
 
 parent.study <- function(phs)  {
+    phs <- phs.version(phs)
+    
+    return(cache.call(
+        match.call()[[1]],
+        phs, {
 
-  phs <- phs.version(phs)
-  if (is.parent(phs)) return(message("This is already a parent study"))
+            if (is.parent(phs)) return(message("This is already a parent study"))
 
-  content <- RCurl::getURL(paste0("https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=", phs))
-
-  start <- regexpr("A sub-study of ", content) + 76
-  stop <- regexpr(";return true;", content) -3
-  parentphs <- substr(content, start, stop)
-
-  parentname <- study.name(parentphs)
-
-  return(c(parentphs, parentname))
+            content <- RCurl::getURL(paste0("https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=", phs))
+            
+            start <- regexpr("A sub-study of ", content) + 76
+            stop <- regexpr(";return true;", content) -3
+            parentphs <- substr(content, start, stop)
+            
+            parentname <- study.name(parentphs)
+            
+            c(parentphs, parentname)
+        }
+    ))
 
 }
 

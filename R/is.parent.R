@@ -10,10 +10,12 @@
 
 is.parent <- function(phs)  {
 
-  phs <- phs.version(phs)
-
-  content <- RCurl::getURL(paste0("https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=", phs))
-
-  return(!grepl("A sub-study of ", content))
+    phs <- phs.version(phs)
+    return(cache.call(
+        match.call()[[1]],
+        phs, {
+            content <- RCurl::getURL(paste0("https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=", phs))
+            !grepl("A sub-study of ", content)
+        }))
 
 }

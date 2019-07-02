@@ -9,20 +9,26 @@
 
 sub.study <- function(phs)  {
 
-  if (!is.parent(phs))  warning("Your study is not a parent study")
-  phs <- phs.version(phs)
-  url <- paste0("https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/GetFolderView.cgi?current_study_id=", phs, "&current_type=101&current_object_id=1&current_folder_type=101")
-  substudies <- RCurl::getURLContent(url)
-  substudies <- XML::xmlToList(strsplit(substudies, "\r*\n")[[1]])[[3]]
+    if (!is.parent(phs))  warning("Your study is not a parent study")
+    phs <- phs.version(phs)
 
-  substudies <- lapply(substudies, function (x) {
-    a <- x[["a"]][[".attrs"]][["onclick"]]
-    return(c(phs = substr(a, regexpr("phs", a), regexpr("return", a)-4),
-             name = x[["a"]][["text"]]))
-  })
+    return(cache.call(
+        match.call()[[1]],
+        phs, {
+            url <- paste0("https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/GetFolderView.cgi?current_study_id=", phs, "&current_type=101&current_object_id=1&current_folder_type=101")
+            substudies <- RCurl::getURLContent(url)
+            substudies <- XML::xmlToList(strsplit(substudies, "\r*\n")[[1]])[[3]]
 
-  substudies <- t(as.data.frame(substudies))
-  row.names(substudies) <- NULL
+            substudies <- lapply(substudies, function (x) {
+                a <- x[["a"]][[".attrs"]][["onclick"]]
+                return(c(phs = substr(a, regexpr("phs", a), regexpr("return", a)-4),
+                         name = x[["a"]][["text"]]))
+            })
 
-  return(substudies)
+            substudies <- t(as.data.frame(substudies))
+            row.names(substudies) <- NULL
+
+            substudies
+        }
+    ))
 }
