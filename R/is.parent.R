@@ -1,6 +1,6 @@
 #' @title Is the study a parent or a child study
 #'
-#' @param phs dbGap study ID (phs00xxxx, or 00xxxx, or xxx)
+#' @param phs dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)
 #'
 #' @return Returns a logical TRUE if the study is a parent, and false if the study is a child
 #'

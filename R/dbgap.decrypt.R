@@ -1,9 +1,9 @@
-#' @title Decrypt ncbi_enc files
+#' @title Decrypts ncbi_enc files
 #'
-#' @return Decrypt the file(s) and replace it in the same folder
+#' @return Decrypts the file(s) and replaces it in the same folder
 #' @param file file or folder where your encrypted files are located
 #'
-#' @description This function decrypts dbGap files (*ncbi_enc) using your personnal key
+#' @description This function decrypts dbGaP files (*ncbi_enc) using your personal key
 #'
 #' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 #' @export

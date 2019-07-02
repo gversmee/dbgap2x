@@ -1,6 +1,6 @@
 #' @title Opens the study webpage in a web browser
 #'
-#' @param phs dbGap study ID (phs00xxxx, or 00xxxx, or xxx)
+#' @param phs dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)
 #' @param no.browser set on TRUE will just display the URL
 #'
 #' @return Open the study webpage in a web browser

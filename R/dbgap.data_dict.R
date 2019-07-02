@@ -1,11 +1,11 @@
-#' @title Create a table dictionnary and a variable dictionnary
+#' @title Creates a table dictionary and a variable dictionary
 #'
 #' @param xml Folder where the xml files are located
 #' @param dest Folder where the data dictionnary and the table dictionnary will be extracted
 #'
 #' @return 2 csv files "phs_tables_dict.csv" and "phs_variables_dict.csv"
 #'
-#' @description This function extracts informations from data.dict xml files in dbgap to create table dictionnary and a variable dictionnary.
+#' @description This function extracts informations from data.dict xml files in dbgap to create table dictionary and a variable dictionary.
 #' @import XML
 #'
 #' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali

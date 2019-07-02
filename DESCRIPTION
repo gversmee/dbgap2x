@@ -5,7 +5,7 @@ Authors@R: c(person("Gregoire", "Versmee", email = "gversmee@mail.harvard.edu", 
 	     person("Laura", "Versmee", role = "aut"),
 	     person("Mikael", "Dusenne", role = "aut"),
 	     person("Niloofar", "Jalali", role = "aut"))
-Description: This package has been created to help users exploring, and downloading phenotic data from the database of Genotypes and Phenotypes (dbGaP)
+Description: This package has been created to help users exploring, downloading and decrypting phenotic and genomic data from the database of Genotypes and Phenotypes (dbGaP)
 URL: https://github.com/gversmee/dbgap2x
 BugReports: https://github.com/gversmee/dbgap2x/issues
 Depends:

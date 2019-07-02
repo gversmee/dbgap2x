@@ -1,8 +1,8 @@
-#' @title Gets you the list of the consent groups of the study
+#' @title Gets the list of the study's consent groups
 #'
-#' @param phs dbGap study ID (phs00xxxx, or 00xxxx, or xxx)
+#' @param phs dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)
 #'
-#' @return Returns a data frame with 3 cols : "consent group number", "cg short name" and "cg long name"
+#' @return Returns a data frame with 3 columns : "consent group number", "cg short name" and "cg long name"
 #'
 #' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 
