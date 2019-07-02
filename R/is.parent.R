@@ -15,7 +15,7 @@ is.parent <- function(phs)  {
         match.call()[[1]],
         phs, {
             content <- RCurl::getURL(paste0("https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=", phs))
-            return(!grepl("A sub-study of ", content))
+            !grepl("A sub-study of ", content)
         }))
 
 }
