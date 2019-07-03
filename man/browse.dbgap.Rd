@@ -2,12 +2,12 @@
 % Please edit documentation in R/browse.dbgap.R
 \name{browse.dbgap}
 \alias{browse.dbgap}
-\title{Open the dbGap webpage of your study in your browser}
+\title{Opens the dbGaP webpage of your study in your browser}
 \usage{
 browse.dbgap(phs, no.browser = FALSE)
 }
 \arguments{
-\item{phs}{dbGap study ID (phs00xxxx, or 00xxxx, or xxx)}
+\item{phs}{dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)}
 
 \item{no.browser}{set on TRUE will just display the URL}
 }
@@ -15,7 +15,7 @@ browse.dbgap(phs, no.browser = FALSE)
 Opens the dbGaP webpage of your study in your browser
 }
 \description{
-Open the dbGap webpage of your study in your browser
+Opens the dbGaP webpage of your study in your browser
 }
 \author{
 Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali

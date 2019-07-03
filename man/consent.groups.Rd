@@ -2,18 +2,18 @@
 % Please edit documentation in R/consent.groups.R
 \name{consent.groups}
 \alias{consent.groups}
-\title{Gets you the list of the consent groups of the study}
+\title{Gets the list of the study's consent groups}
 \usage{
 consent.groups(phs)
 }
 \arguments{
-\item{phs}{dbGap study ID (phs00xxxx, or 00xxxx, or xxx)}
+\item{phs}{dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)}
 }
 \value{
-Returns a data frame with 3 cols : "consent group number", "cg short name" and "cg long name"
+Returns a data frame with 3 columns : "consent group number", "cg short name" and "cg long name"
 }
 \description{
-Gets you the list of the consent groups of the study
+Gets the list of the study's consent groups
 }
 \author{
 Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali

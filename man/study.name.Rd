@@ -2,18 +2,18 @@
 % Please edit documentation in R/study.name.R
 \name{study.name}
 \alias{study.name}
-\title{Gets you the full name of the study on dbGap}
+\title{Gets you the full name of the study on dbGaP}
 \usage{
 study.name(phs)
 }
 \arguments{
-\item{phs}{dbGap study ID (phs00xxxx, or 00xxxx, or xxx)}
+\item{phs}{dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)}
 }
 \value{
 Returns the full name of the study
 }
 \description{
-Gets you the full name of the study on dbGap
+Gets you the full name of the study on dbGaP
 }
 \author{
 Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali

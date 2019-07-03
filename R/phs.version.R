@@ -1,6 +1,6 @@
-#' @title Gets you the full dbGap study ID of your study, with the latest version
+#' @title Gets you the full dbGaP study ID of your study, with the latest version
 #'
-#' @param phs dbGap study ID (phs00xxxx, or 00xxxx, or xxx)
+#' @param phs dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)
 #'
 #' @return Returns the full ID of the latest version of your study
 #'

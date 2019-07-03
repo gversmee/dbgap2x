@@ -2,18 +2,18 @@
 % Please edit documentation in R/datatables.dict.R
 \name{datatables.dict}
 \alias{datatables.dict}
-\title{Create a tables dictionnary of your study}
+\title{Creates study's tables dictionary}
 \usage{
 datatables.dict(phs)
 }
 \arguments{
-\item{phs}{dbGap study ID (phs00xxxx, or 00xxxx, or xxx)}
+\item{phs}{dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)}
 }
 \value{
-a data.frame with 3 cols : XXXXX
+a data.frame with 3 columns : table id (pht), table name (dt_study_name) and description (dt_label)
 }
 \description{
-This function extracts informations from data.dict.xml files from the dbgap ftp server to create a table dictionnary.
+This function extracts informations from data.dict.xml files from the dbGaP ftp server to create a table dictionary.
 }
 \author{
 Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali

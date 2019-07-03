@@ -1,10 +1,10 @@
-#' @title Create study's tables dictionary
+#' @title Creates study's tables dictionary
 #'
 #' @param phs dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)
 #'
 #' @return a data.frame with 3 columns : table id (pht), table name (dt_study_name) and description (dt_label)
 #'
-#' @description This function extracts informations from data.dict.xml files from the dbgap ftp server to create a table dictionnary.
+#' @description This function extracts informations from data.dict.xml files from the dbGaP ftp server to create a table dictionary.
 #' @import XML
 #' @import RCurl
 #' @import parallel

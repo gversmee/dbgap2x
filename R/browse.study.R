@@ -3,7 +3,7 @@
 #' @param phs dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)
 #' @param no.browser set on TRUE will just display the URL
 #'
-#' @return Open the study webpage in a web browser
+#' @return Opens the study webpage in a web browser
 #'
 #' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 

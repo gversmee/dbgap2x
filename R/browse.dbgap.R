@@ -1,4 +1,4 @@
-#' @title Open the dbGaP webpage of your study in your browser
+#' @title Opens the dbGaP webpage of your study in your browser
 #'
 #' @param phs dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)
 #' @param no.browser set on TRUE will just display the URL

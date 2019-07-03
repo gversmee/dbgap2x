@@ -164,7 +164,7 @@ study.name("286")
 'Jackson Heart Study (JHS) Cohort'
 
 
-##### Finally, you can watch your study on dbGa with browse.dbgap().
+##### Finally, you can watch your study on dbGaP with browse.dbgap().
 ##### If a website exists for this study, you can browse it using browse.study()
 
 

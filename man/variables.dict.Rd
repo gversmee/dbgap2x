@@ -2,18 +2,18 @@
 % Please edit documentation in R/variable.dict.R
 \name{variables.dict}
 \alias{variables.dict}
-\title{Creates a variables dictionnary of your study}
+\title{Creates a variables dictionary of your study}
 \usage{
 variables.dict(phs)
 }
 \arguments{
-\item{phs}{dbGap study ID (phs00xxxx, or 00xxxx, or xxx)}
+\item{phs}{dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)}
 }
 \value{
-a data.frame with 4 cols : variable identifier (dbGap), table name, variable name, variable description
+a data.frame with 4 columnss : variable identifier (dbGap), table name, variable name, variable description
 }
 \description{
-This function extracts informations from data.dict.xml files from the dbgap ftp server to create a variable dictionnary.
+This function extracts informations from data.dict.xml files from the dbgap ftp server to create a variable dictionary.
 }
 \author{
 Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali

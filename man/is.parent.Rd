@@ -2,18 +2,18 @@
 % Please edit documentation in R/is.parent.R
 \name{is.parent}
 \alias{is.parent}
-\title{Is the study a parent or a child study}
+\title{Is the study a parent or a child study?}
 \usage{
 is.parent(phs)
 }
 \arguments{
-\item{phs}{dbGap study ID (phs00xxxx, or 00xxxx, or xxx)}
+\item{phs}{dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)}
 }
 \value{
-Returns a logical TRUE if the study is a parent, and false if the study is a child
+Returns a logical TRUE if the study is a parent, and FALSE if the study is a child
 }
 \description{
-Is the study a parent or a child study
+Is the study a parent or a child study?
 }
 \author{
 Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali

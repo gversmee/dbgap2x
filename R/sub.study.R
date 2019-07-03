@@ -1,6 +1,6 @@
 #' @title Gives the substudies associated with the one selected
 #'
-#' @param phs dbGap study ID (phs00xxxx, or 00xxxx, or xxx)
+#' @param phs dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)
 #'
 #' @return Returns a dataframe with 2 cols : the phs id and the name of the substudy
 #'

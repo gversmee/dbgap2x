@@ -2,18 +2,18 @@
 % Please edit documentation in R/phs.version.R
 \name{phs.version}
 \alias{phs.version}
-\title{Gets you the full dbGap study ID of your study, with the latest version}
+\title{Gets you the full dbGaP study ID of your study, with the latest version}
 \usage{
 phs.version(phs)
 }
 \arguments{
-\item{phs}{dbGap study ID (phs00xxxx, or 00xxxx, or xxx)}
+\item{phs}{dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)}
 }
 \value{
 Returns the full ID of the latest version of your study
 }
 \description{
-Gets you the full dbGap study ID of your study, with the latest version
+Gets you the full dbGaP study ID of your study, with the latest version
 }
 \author{
 Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali

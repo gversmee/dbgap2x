@@ -1,6 +1,4 @@
 #' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
-#' @import
-#' @export
 
 cacheEnv <- new.env()
 

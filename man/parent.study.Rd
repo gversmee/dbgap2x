@@ -7,7 +7,7 @@
 parent.study(phs)
 }
 \arguments{
-\item{phs}{dbGap study ID (phs00xxxx, or 00xxxx, or xxx)}
+\item{phs}{dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)}
 }
 \value{
 Returns the phs id of the latest version of the parent study, and its full name. If the study is it's parent itself, will return the phs id and the name of the study.

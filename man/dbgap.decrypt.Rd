@@ -2,7 +2,7 @@
 % Please edit documentation in R/dbgap.decrypt.R
 \name{dbgap.decrypt}
 \alias{dbgap.decrypt}
-\title{Decrypt ncbi_enc files}
+\title{Decrypts ncbi_enc files}
 \usage{
 dbgap.decrypt(files, key = FALSE)
 }
@@ -10,10 +10,10 @@ dbgap.decrypt(files, key = FALSE)
 \item{file}{file or folder where your encrypted files are located}
 }
 \value{
-Decrypt the file(s) and replace it in the same folder
+Decrypts the file(s) and replaces it in the same folder
 }
 \description{
-This function decrypts dbGap files (*ncbi_enc) using your personnal key
+This function decrypts dbGaP files (*ncbi_enc) using your personal key
 }
 \author{
 Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali

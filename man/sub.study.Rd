@@ -7,7 +7,7 @@
 sub.study(phs)
 }
 \arguments{
-\item{phs}{dbGap study ID (phs00xxxx, or 00xxxx, or xxx)}
+\item{phs}{dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)}
 }
 \value{
 Returns a dataframe with 2 cols : the phs id and the name of the substudy

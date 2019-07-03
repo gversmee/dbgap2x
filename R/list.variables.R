@@ -10,7 +10,6 @@
 #' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 #' @export
 
-
 list.variables <- function(phs, useftp=F)  {
     phs <- phs.version(phs)
     cache.call(

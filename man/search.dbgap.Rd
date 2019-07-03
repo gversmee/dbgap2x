@@ -2,7 +2,7 @@
 % Please edit documentation in R/search.dbgap.R
 \name{search.dbgap}
 \alias{search.dbgap}
-\title{Opens the results of your search on dbGaP}
+\title{Gets the results of your search on dbGaP}
 \usage{
 search.dbgap(term, no.browser = FALSE)
 }
@@ -12,10 +12,10 @@ search.dbgap(term, no.browser = FALSE)
 \item{no.browser}{set on TRUE will just display the URL}
 }
 \value{
-Open the results of your search on dbGap
+A data frame of the results of your search on dbGaP
 }
 \description{
-Opens the results of your search on dbGaP
+Gets the results of your search on dbGaP
 }
 \author{
 Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali

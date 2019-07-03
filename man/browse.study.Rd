@@ -7,12 +7,12 @@
 browse.study(phs, no.browser = FALSE)
 }
 \arguments{
-\item{phs}{dbGap study ID (phs00xxxx, or 00xxxx, or xxx)}
+\item{phs}{dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)}
 
 \item{no.browser}{set on TRUE will just display the URL}
 }
 \value{
-Open the study webpage in a web browser
+Opens the study webpage in a web browser
 }
 \description{
 Opens the study webpage in a web browser

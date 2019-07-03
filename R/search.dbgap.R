@@ -1,9 +1,9 @@
-#' @title Opens the results of your search on dbGaP
+#' @title Gets the results of your search on dbGaP
 #'
 #' @param term Term of your search
 #' @param no.browser set on TRUE will just display the URL
 #'
-#' @return Open the results of your search on dbGap
+#' @return A data frame of the results of your search on dbGaP
 #'
 #' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 

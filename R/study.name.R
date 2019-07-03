@@ -1,6 +1,6 @@
-#' @title Gets you the full name of the study on dbGap
+#' @title Gets you the full name of the study on dbGaP
 #'
-#' @param phs dbGap study ID (phs00xxxx, or 00xxxx, or xxx)
+#' @param phs dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)
 #'
 #' @return Returns the full name of the study
 #'

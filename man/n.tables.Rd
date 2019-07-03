@@ -7,13 +7,13 @@
 n.tables(phs)
 }
 \arguments{
-\item{phs}{dbGap study ID (phs00xxxx, or 00xxxx, or xxx)}
+\item{phs}{dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)}
 }
 \value{
 Return the number of phenotypic datatables in the study
 }
 \description{
-This function extracts informations from data.dict.xml files from the dbgap ftp server to get the study characteristics. Works only for a parent study.
+This function extracts informations from data.dict.xml files from the dbGaP ftp server to get the study characteristics. Works only for a parent study.
 }
 \author{
 Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
