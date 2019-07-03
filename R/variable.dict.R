@@ -2,9 +2,9 @@
 #'
 #' @param phs dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)
 #'
-#' @return a data.frame with 4 columnss : variable identifier (dbGap), table name, variable name, variable description
+#' @return A data.frame with 4 columns : variable identifier (dbGaP), table name, variable name, variable description
 #'
-#' @description This function extracts informations from data.dict.xml files from the dbgap ftp server to create a variable dictionary.
+#' @description This function extracts informations from data.dict.xml files from the dbGaP ftp server to create a variable dictionary.
 #' @import XML
 #' @import RCurl
 #' @import parallel

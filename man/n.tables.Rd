@@ -10,7 +10,7 @@ n.tables(phs)
 \item{phs}{dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)}
 }
 \value{
-Return the number of phenotypic datatables in the study
+Returns the number of phenotypic datatables in the study
 }
 \description{
 This function extracts informations from data.dict.xml files from the dbGaP ftp server to get the study characteristics. Works only for a parent study.

@@ -1,6 +1,6 @@
 #' @title Lists the phenotypic datatables in the study
 #'
-#' @return Return the phenotypic datatables in the study
+#' @return Returns the phenotypic datatables in the study
 #'
 #' @import RCurl
 #'

@@ -7,7 +7,7 @@
 list.tables(filelist)
 }
 \value{
-Return the phenotypic datatables in the study
+Returns the phenotypic datatables in the study
 }
 \description{
 Lists the phenotypic datatables in the study

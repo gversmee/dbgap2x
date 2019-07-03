@@ -15,7 +15,7 @@ n.pop(phs, consentgroups = TRUE, gender = TRUE)
 a data.frame with 2 columns : name of the consent group and n total. Possibility to add the breakdown by gender.
 }
 \description{
-This function extracts information from data.dict.xml files from the dbgap ftp server to get the population characteristics. Works only for parents studies.
+This function extracts information from data.dict.xml files from the dbGaP ftp server to get the population characteristics. Works only for parents studies.
 }
 \author{
 Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali

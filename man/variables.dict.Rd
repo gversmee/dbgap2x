@@ -10,10 +10,10 @@ variables.dict(phs)
 \item{phs}{dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)}
 }
 \value{
-a data.frame with 4 columnss : variable identifier (dbGap), table name, variable name, variable description
+A data.frame with 4 columns : variable identifier (dbGaP), table name, variable name, variable description
 }
 \description{
-This function extracts informations from data.dict.xml files from the dbgap ftp server to create a variable dictionary.
+This function extracts informations from data.dict.xml files from the dbGaP ftp server to create a variable dictionary.
 }
 \author{
 Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
