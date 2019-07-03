@@ -13,9 +13,9 @@ RUN conda install --quiet --yes \
     'r-irkernel=0.8.*' \
     'r-rcurl=1.95.*' \
     'r-xml=3.98*' \
-    'r-data.table=1.12.*' \
-    'r-httr=1.*' \
-    'r-rlist=0.4.*' && \
+    'r-data.table' \
+    'r-httr' \
+    'r-rlist' && \
     conda clean --all -f -y && \
     fix-permissions $CONDA_DIR
 
