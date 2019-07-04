@@ -1,6 +1,7 @@
 #' @title Creates a variables dictionary of your study
 #'
 #' @param phs dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)
+#' @param cores Number of cores used to perform the function. Default to the number of cores available on your system. Decrease the number if the function doesn't perform as expected
 #'
 #' @return A data.frame with 4 columns : variable identifier (dbGaP), table name, variable name, variable description
 #'
@@ -13,7 +14,7 @@
 #' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 #' @export
 
-variables.dict <-function (phs)  {
+variables.dict <-function (phs, cores = parallel::detectCores())  {
 
   phs <- phs.version(phs)
 
@@ -36,7 +37,7 @@ variables.dict <-function (phs)  {
 
     return(df)
 
-  }, mc.cores = getOption("mc.cores", parallel::detectCores()))
+  }, mc.cores = cores)
 
   table <- data.table::rbindlist(mcl)
 

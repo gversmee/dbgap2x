@@ -1,6 +1,7 @@
 #' @title Creates study's tables dictionary
 #'
 #' @param phs dbGaP study ID (phs00xxxx, or 00xxxx, or xxx)
+#' @param cores Number of cores used to perform the function. Default to the number of cores available on your system. Decrease the number if the function doesn't perform as expected
 #'
 #' @return a data.frame with 3 columns : table id (pht), table name (dt_study_name) and description (dt_label)
 #'
@@ -12,7 +13,7 @@
 #' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne, Niloofar Jalali
 #' @export
 
-datatables.dict <-function (phs)  {
+datatables.dict <-function (phs, cores = parallel::detectCores())  {
 
   phs <- phs.version(phs)
 
@@ -36,7 +37,7 @@ datatables.dict <-function (phs)  {
     if (is.null(dt_label)) dt_label <- dt_sn
 
     return(c(dt_name, dt_sn, dt_label))
-  }, mc.cores = getOption("mc.cores", parallel::detectCores()))
+  }, mc.cores = cores)
   , check.names = FALSE, fix.empty.names = FALSE, stringsAsFactors = FALSE)))
 
   #Create column names
@@ -44,3 +45,4 @@ datatables.dict <-function (phs)  {
 
   return(df)
 }
+
