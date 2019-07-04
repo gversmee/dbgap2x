@@ -19,9 +19,17 @@ and then open your web browser at http://localhost, and use the password `dbgap2
 
 
 ```R
+install.packages("devtools")
 devtools::install_github("gversmee/dbgap2x")
 ```
 
+For using the package with a fresh R installation, make sure your system has the following libraries: libcurl4-openssl-dev libssl-dev libxml2-dev.
+Example for a debian system:
+
+```bash
+sudo apt-get update
+sudo apt-get install libcurl4-openssl-dev libssl-dev libxml2-dev -y
+```
 
 
 ## Introduction
