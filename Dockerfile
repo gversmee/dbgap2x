@@ -50,12 +50,12 @@ RUN apt-get update && \
     
 COPY --from=git /root/dbgap2x $HOME/dbgap2x
 
+RUN jupyter trust $HOME/dbgap2x/dbgap2x.ipynb
+
 RUN Rscript -e "install.packages('$HOME/dbgap2x', repos = NULL, type = 'source')" && \
 chown -R $NB_USER $HOME/dbgap2x && \
 chmod -R 4775 $HOME/dbgap2x && \
 rm -rf $HOME/.local && \
 fix-permissions $HOME
-
-RUN jupyter trust $HOME/dbgap2x/dbgap2x.ipynb
 
 WORKDIR $HOME/dbgap2x
