@@ -1,4 +1,3 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gversmee/dbgap2x/master?filepath=dbgap2x.ipynb)
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](https://opensource.org/licenses/Apache-2.0)
 [![DOI](https://zenodo.org/badge/153461909.svg)](https://zenodo.org/badge/latestdoi/153461909)
 [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/gversmee/dbgap2x/)
@@ -6,7 +5,6 @@
 # Using dbgap2x, R package to explore, download and decrypt phenotypic and genomic data from dbGaP
 
 You can test this software:
-- Using binder, by clicking the "launch binder" badge above.
 - Using the dockerized version on your local device by running
 
 
