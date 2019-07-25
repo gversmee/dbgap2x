@@ -68,8 +68,7 @@ lsf.str("package:dbgap2x")
 
 ## Search for dbGaP studies
 ### Let's try to explore the "Jackson Heart Study" cohort that exists on dbGaP.
-##### We created the function "browse.dbgap", which helps you to find the studies related to the term that you search on your web browser.
-You can choose to launch the result on a web browser, or just to print the URL.
+##### We created the function "browse.dbgap", which helps you to find the studies related to the term that you search for.
 
 
 ```R
